@@ -1,12 +1,12 @@
 -- Создание структуры таблицы
 CREATE TABLE IF NOT EXISTS Genres (
 	id SERIAL PRIMARY KEY,
-	genre VARCHAR(30) NOT NULL
+	genre VARCHAR(30) NOT NULL UNIQUE
 );
 
 CREATE TABLE IF NOT EXISTS Performers (
 	id SERIAL PRIMARY KEY,
-	performer VARCHAR(50) NOT NULL
+	performer VARCHAR(50)
 );
 
 CREATE TABLE IF NOT EXISTS GenresPerformers (
@@ -17,7 +17,7 @@ CREATE TABLE IF NOT EXISTS GenresPerformers (
 
 CREATE TABLE IF NOT EXISTS Albums (
 	id SERIAL PRIMARY KEY,
-	album VARCHAR(100) NOT NULL,
+	album VARCHAR(100),
 	year DATE NOT NULL
 );
 
